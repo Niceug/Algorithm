@@ -1,0 +1,33 @@
+﻿  LinkList.c
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(100): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(100): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(101): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(101): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(102): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(102): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(103): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(103): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(104): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(104): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(112): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(112): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(113): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(113): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(114): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(114): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(115): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(115): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(116): warning C4047: “函数”:“PNode *”与“PNode”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(116): warning C4024: “SListPushBack”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(147): warning C4474: printf: 格式字符串中传递的参数太多
+  c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(147): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(576): warning C4098: “DeleteLastKNode”:“void”函数返回值
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(624): warning C4028: 形参 2 与声明不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(630): warning C4047: “函数”:“PNode”与“PNode *”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(630): warning C4024: “setJosephCirecle”: 形参和实参 1 的类型不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(653): warning C4047: “初始化”:“PNode”与“PNode *”的间接级别不同
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(345): warning C4715: “SListFind”: 不是所有的控件路径都返回值
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(546): warning C4715: “FindMiddleNode”: 不是所有的控件路径都返回值
+c:\users\hasee\documents\visual studio 2015\projects\单链表\单链表\linklist.c(606): warning C4715: “searchDaoshuNode”: 不是所有的控件路径都返回值
+  单链表.vcxproj -> C:\Users\hasee\documents\visual studio 2015\Projects\单链表\Debug\单链表.exe
+  单链表.vcxproj -> C:\Users\hasee\documents\visual studio 2015\Projects\单链表\Debug\单链表.pdb (Full PDB)
