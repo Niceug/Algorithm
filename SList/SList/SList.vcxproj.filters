@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SList.c">
+    <ClCompile Include="complexNode.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLinkList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkList.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

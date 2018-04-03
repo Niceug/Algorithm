@@ -1,3 +1,4 @@
+#if 1==1
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -102,6 +103,10 @@ void setMagicCard(PNode* pHead);
 //拉丁矩阵
 int** LatinArray(PNode* pHead, unsigned int n);
 //测试合并两个有序链表
+
+void UnionSet(PNode pHead1, PNode pHead2);
+
+PNode isCrossHasCircle(PNode pHead1, PNode pHead2);
 
 void testMerge() {
 
@@ -276,7 +281,7 @@ void testReverseSListOP() {
 	SListPushBack(&pHead, 5);
 	SListPushBack(&pHead, 6);
 	showSList(pHead);
-	ReverseSListOP(&pHead);
+	//ReverseSListOP(&pHead);
 	showSList(pHead);
 }
 
@@ -347,6 +352,86 @@ void testLatinArray() {
 }
 
 
+void testUnionSet() {
+	PNode pHead;
+	SListInit(&pHead);
+	SListPushBack(&pHead, 1);
+	SListPushBack(&pHead, 3);
+	SListPushBack(&pHead, 5);
+	SListPushBack(&pHead, 8);
+	showSList(pHead);
+
+	PNode pHead1;
+	SListInit(&pHead1);
+	SListPushBack(&pHead1, 2);
+	SListPushBack(&pHead1, 4);
+	SListPushBack(&pHead1, 5);
+	SListPushBack(&pHead1, 8);
+	SListPushBack(&pHead1, 10);
+	SListPushBack(&pHead1, 15);
+	showSList(pHead1);
+	UnionSet(pHead1, pHead);
+}
+
+
+//带环相交
+testIsCrossHasCircle() {
+	PNode pHead;
+	SListInit(&pHead);
+	SListPushBack(&pHead, 11);
+	SListPushBack(&pHead, 12);
+	SListPushBack(&pHead, 13);
+	SListPushBack(&pHead, 14);
+	showSList(pHead);
+
+	PNode pHead1;
+	SListInit(&pHead1);
+	SListPushBack(&pHead1, 21);
+	SListPushBack(&pHead1, 22);
+	SListPushBack(&pHead1, 23);
+	SListPushBack(&pHead1, 24);
+	SListPushBack(&pHead1, 25);
+	SListPushBack(&pHead1, 26);
+	showSList(pHead1);
+
+
+	//测试不带环相交
+	/*SListBack(pHead)->_pNext = getAnyNode(pHead1, 5);
+	PNode crossNode = isCrossHasCircle(pHead, pHead1);
+	printf("交点为%d\n", crossNode->_data);*/
+
+	////测试无环不相交
+	//PNode crossNode = isCrossHasCircle(pHead, pHead1);
+	//if (crossNode != NULL) {
+	//	printf("交点为%d\n", crossNode->_data);
+	//}
+	//else {
+	//	printf("无交点\n");
+	//}
+
+		
+	
+	////测试环外相交
+	////14->23
+	//SListBack(pHead)->_pNext = getAnyNode(pHead1, 3);
+	////26->24
+	//SListBack(pHead1)->_pNext = getAnyNode(pHead1, 4);
+	//PNode crossNode = isCrossHasCircle(pHead, pHead1);
+	//printf("交点为%d\n", crossNode->_data);
+
+
+	//测试环内相交，交点为任意一个入口点
+	//26->22
+	SListBack(pHead1)->_pNext = getAnyNode(pHead1, 2);
+	//14->23
+	SListBack(pHead)->_pNext = getAnyNode(pHead1, 3);
+	PNode crossNode = isCrossHasCircle(pHead, pHead1);
+	printf("交点为%d\n", crossNode->_data);
+
+	
+
+}
+
 int main()
 {
 	//合并有序链表
@@ -377,6 +462,8 @@ int main()
 	//testSetMagicCard();
 	//拉丁矩阵
 	//testLatinArray();
+	//testUnionSet();
+	testIsCrossHasCircle();
 	return 0;
 }
 
@@ -584,7 +671,7 @@ void InsertPosFront(PNode descNode, DataType _data) {
 
 //正常打印单链表
 void showSList(PNode head) {
-	PNode pCur = head;
+	PNode pCur = head->_pNext;
 	while (pCur) {
 		printf("%d ", pCur->_data);
 		pCur = pCur->_pNext;
@@ -890,10 +977,10 @@ PNode hasCircle(PNode pHead) {
 	while (1) {
 		pFast = pFast->_pNext->_pNext;
 		pSlow = pSlow->_pNext;
-		if (pFast == pSlow)
-			break;
 		if (pFast == NULL)
 			return NULL;
+		if (pFast == pSlow)
+			break;
 	}
 	pFast = pHead;
 	while (pFast != pSlow){
@@ -910,6 +997,232 @@ PNode hasCircle(PNode pHead) {
 	printf("环的长度为%d\n", circleLen);
 	return pFast;
 }
+
+//判断两个链表是否相交（可能带环）
+PNode isCrossHasCircle(PNode pHead1, PNode pHead2) {
+	assert(pHead1);
+	assert(pHead2);
+
+	PNode pCur1 = pHead1->_pNext;
+	PNode pCur2 = pHead2->_pNext;
+
+	//len1和len2不带环时表示两个链表的长度
+	int len1 = 0;
+	int len2 = 0;
+
+	PNode pPreCur = NULL;
+
+	PNode pCur1Slow = pHead1->_pNext;
+	PNode pCur1Fast = pHead1->_pNext;
+
+	//情况1，在环外相交
+	while (1) {
+
+		pCur1Slow = pCur1Slow->_pNext;
+		
+		if (pCur1Fast == NULL) {
+			len1 = len1 * 2;
+			break;
+		}
+		pPreCur = pCur1Fast->_pNext;
+
+		if (pPreCur == NULL) {
+			len1 = len1 * 2 + 1;
+			pCur1Fast = NULL;
+			break;
+		}
+			
+		pCur1Fast = pCur1Fast->_pNext->_pNext;
+
+		len1++;
+		if (pCur1Slow == pCur1Fast)
+			break;	
+	}
+
+	//记录下快慢指针在环内的交点
+	PNode cross1 = pCur1Slow;
+	
+	PNode pCur2Slow = pHead2->_pNext;
+	PNode pCur2Fast = pHead2->_pNext;
+	
+	
+	while (1) {
+
+		pCur2Slow = pCur2Slow->_pNext;
+
+		if (pCur2Fast == NULL) {
+			len2 = len2 * 2;
+			break;
+		}
+
+		pPreCur = pCur2Fast->_pNext;
+
+		if (pPreCur == NULL) {
+			len2 = len2 * 2 + 1;
+			break;
+		}
+
+		pCur2Fast = pCur2Fast->_pNext->_pNext;
+
+		len2++;
+		
+		//判断是否在环内相交
+		if (pCur2Slow == pCur2Fast) 
+			break;	
+	}
+
+	PNode cross2 = pCur2Slow;
+
+	//有一个不带环一个带环，绝对不相交
+	if (pCur1Fast == NULL && pCur2Fast != NULL)
+		return NULL;
+	else if (pCur1Fast != NULL && pCur2Fast == NULL)
+		return NULL;
+	else if (pCur1Fast == NULL && pCur2Fast == NULL) {
+		//都等于空的情况（两个都不带环）
+		int len = len1 - len2;
+		pCur1 = pHead1->_pNext;
+		pCur2 = pHead2->_pNext;
+		if (len > 0) {
+			//链表1比链表2长
+			while (len--) {
+				pCur1 = pCur1->_pNext;
+			}
+			while (pCur1 != pCur2) {
+				
+				pCur1 = pCur1->_pNext;
+				pCur2 = pCur2->_pNext;
+
+				//不相交
+				if (pCur1 == NULL)
+					return NULL;
+			}
+			return pCur1;
+		}
+		else {
+			//链表1比链表2短
+			while (len++) {
+				pCur2 = pCur2->_pNext;
+			}
+			while (pCur1 != pCur2) {
+				
+				pCur1 = pCur1->_pNext;
+				pCur2 = pCur2->_pNext;
+
+				//不相交
+				if (pCur1 == NULL)
+					return NULL;
+			}
+			return pCur2;
+		}
+	}
+	else {
+		//都不等于空的情况（两个链表都带环）
+
+		//判断是否属于同一个环
+		PNode pTemp = cross1;
+		while (1) {
+			cross1 = cross1->_pNext;
+			
+			if (cross1 == pTemp && cross1 != cross2)
+				return NULL;
+			//相遇了代表在同一个环里面
+			if (cross1 == cross2) {
+				break;
+			}
+		}
+		
+	//如果交点在环外，len1和len2分别表示两个到入口点的距离
+
+		len2 = 0;
+		//求带环链表2的入口点，pCur2Slow是环内的一点
+		pCur2Fast = pHead2->_pNext;
+		//找Cur2环的入口
+		while (pCur2Fast != pCur2Slow) {
+			len2++;
+			pCur2Fast = pCur2Fast->_pNext;
+			pCur2Slow = pCur2Slow->_pNext;
+		}
+		printf("len2=%d \n", len2);
+		len1 = 0;
+		//判断交点是否在入口点之前
+		pCur1 = pHead1->_pNext;
+		while (1) {
+			pCur1 = pCur1->_pNext;
+		
+			len1++;
+			if (pCur1 == pCur2Fast) {
+				printf("len1=%d \n", len1);
+				//交点在环外
+				int len = len1 - len2;
+				pCur1 = pHead1->_pNext;
+				pCur2 = pHead2->_pNext;
+				if (len > 0) {
+					while (len--) {
+						pCur1 = pCur1->_pNext;
+					}
+					while (1) {
+						if (pCur2 == pCur1)
+							return pCur2;
+
+						pCur2 = pCur2->_pNext;
+						pCur1 = pCur1->_pNext;
+					}
+					
+					
+				}
+				else {
+					while (len++) {
+						pCur2 = pCur2->_pNext;
+					}
+					while (1) {
+						if (pCur2 == pCur1)
+							return pCur2;
+						pCur2 = pCur2->_pNext;
+						pCur1 = pCur1->_pNext;
+						
+					}
+				}
+
+				if (pCur1 == pTemp)
+					//交点在环内
+					break;
+				break;
+
+			}
+		}
+		//交点在环内
+		return pCur2Fast;
+	}
+}
+
+//求两个已排序单链表中相同的数据,merge
+void UnionSet(PNode pHead1, PNode pHead2) {
+	assert(pHead1);
+	assert(pHead2);
+	PNode pCur1 = pHead1;
+	PNode pCur2 = pHead2;
+	int data = 0;
+	while (1) {
+		if (pCur1->_data < pCur2->_data) {
+			pCur1 = pCur1->_pNext;
+		}
+		else {
+			if (pCur1->_data == pCur2->_data  && data != pCur1->_data) {
+				data = pCur1->_data;
+				printf("%d  ", data);
+			}
+			pCur2 = pCur2->_pNext;
+		}
+
+		if (!pCur1)
+			break;
+		if (!pCur2)
+			break;
+	
+	}
+}
+
 
 //魔术师发牌问题
 void setMagicCard(PNode* pHead) {
@@ -1006,3 +1319,5 @@ int** LatinArray(PNode* pHead, unsigned int n) {
 	}
 	return arr;
 }
+
+#endif
