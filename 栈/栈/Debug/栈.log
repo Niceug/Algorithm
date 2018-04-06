@@ -1,2 +1,24 @@
-﻿  栈.vcxproj -> C:\Users\hasee\documents\visual studio 2015\Projects\栈\Debug\栈.exe
-  栈.vcxproj -> C:\Users\hasee\documents\visual studio 2015\Projects\栈\Debug\栈.pdb (Full PDB)
+﻿  Stack.c
+d:\visual studio 2015\projects\栈\栈\stack.c(51): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\栈\栈\stack.c(129): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int”
+d:\visual studio 2015\projects\栈\栈\stack.c(143): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\栈\栈\stack.c(150): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\栈\栈\stack.c(153): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+d:\visual studio 2015\projects\栈\栈\stack.c(290): warning C4033: “caculateNifixExpression”必须返回值
+d:\visual studio 2015\projects\栈\栈\stack.c(310): warning C4047: “函数”:“DataType *”与“int **”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(310): warning C4024: “StackPop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\栈\栈\stack.c(311): warning C4047: “=”:“int”与“int *”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(312): warning C4047: “函数”:“DataType *”与“int **”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(312): warning C4024: “StackPop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\栈\栈\stack.c(313): warning C4047: “=”:“int”与“int *”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(316): warning C4047: “=”:“int *”与“int”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(319): warning C4047: “函数”:“DataType”与“int *”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(319): warning C4024: “StackPush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\栈\栈\stack.c(323): warning C4047: “函数”:“DataType *”与“int **”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(323): warning C4024: “StackPop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\栈\栈\stack.c(325): warning C4047: “return”:“int”与“int *”的间接级别不同
+d:\visual studio 2015\projects\栈\栈\stack.c(324): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+d:\visual studio 2015\projects\栈\栈\stack.c(280): warning C4715: “caculate”: 不是所有的控件路径都返回值
+d:\visual studio 2015\projects\栈\栈\stack.c(326): warning C4715: “caculateNifixExpression”: 不是所有的控件路径都返回值
+  栈.vcxproj -> D:\visual studio 2015\Projects\栈\Debug\栈.exe
+  栈.vcxproj -> D:\visual studio 2015\Projects\栈\Debug\栈.pdb (Full PDB)
