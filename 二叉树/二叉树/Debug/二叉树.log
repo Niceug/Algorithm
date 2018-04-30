@@ -1,0 +1,43 @@
+﻿  btree.c
+d:\visual studio 2015\projects\二叉树\二叉树\stack.h(1): warning C4091: “extern ”: 没有声明变量时忽略“BTree”的左侧
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(18): warning C4013: “strlen”未定义；假设外部返回 int
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(180): warning C4133: “函数”: 从“BTNode *”到“StackElement”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(183): warning C4133: “函数”: 从“PBTNode *”到“StackElement *”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(201): warning C4133: “函数”: 从“PBTNode”到“StackElement”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(206): warning C4133: “函数”: 从“PBTNode *”到“StackElement *”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(234): warning C4133: “函数”: 从“PBTNode”到“StackElement”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(242): warning C4133: “函数”: 从“BTNode *”到“StackElement”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(244): warning C4133: “函数”: 从“BTNode *”到“StackElement”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(249): warning C4133: “=”: 从“StackElement”到“PBTNode”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(258): warning C4133: “函数”: 从“PBTNode *”到“StackElement *”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(271): warning C4133: “函数”: 从“PBTNode *”到“StackElement *”的类型不兼容
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(292): warning C4047: “函数”:“ElementType”与“PBTNode”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(292): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(299): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(299): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(301): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(301): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(302): warning C4047: “函数”:“ElementType *”与“PBTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(302): warning C4024: “QueuePop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(295): warning C4047: “初始化”:“PBTNode”与“ElementType”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(311): warning C4047: “函数”:“ElementType”与“PBTNode”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(311): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(317): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(317): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(319): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(319): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(321): warning C4047: “函数”:“ElementType *”与“PBTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(321): warning C4024: “QueuePop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(314): warning C4047: “初始化”:“PBTNode”与“ElementType”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(395): warning C4047: “函数”:“ElementType”与“PBTNode”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(395): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(397): warning C4047: “函数”:“ElementType *”与“PBTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(397): warning C4024: “QueuePop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(401): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(401): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(402): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(402): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(380): warning C4715: “Find”: 不是所有的控件路径都返回值
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(385): warning C4716: “IsNodeInBinTree”: 必须返回一个值
+  二叉树.vcxproj -> D:\visual studio 2015\Projects\二叉树\Debug\二叉树.exe
+  二叉树.vcxproj -> D:\visual studio 2015\Projects\二叉树\Debug\二叉树.pdb (Full PDB)
