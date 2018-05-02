@@ -46,10 +46,6 @@ int main() {
 	PostOrderNor(pRoot);
 	printf("\n\n");
 
-	printf("层序遍历：");
-	LevelOrder(pRoot);
-	printf("\n\n");
-
 	int size = BinTreeSize(pRoot);
 	printf("二叉树节点个数为%d\n", size);
 
@@ -81,13 +77,17 @@ int main() {
 	else
 		printf("不是完全二叉树！\n");
 
-	MirrorBinTreeNor(pRoot);
-	printf("二叉树镜像之后层序遍历：\n");
+	printf("层序遍历：");
 	LevelOrder(pRoot);
 	printf("\n\n");
 
 	MirrorBinTreeNor(pRoot);
-	printf("再次二叉树镜像之后层序遍历：\n");
+	printf("循环二叉树镜像之后层序遍历：\n");
+	LevelOrder(pRoot);
+	printf("\n\n");
+
+	MirrorBinTree(pRoot);
+	printf("递归二叉树镜像之后层序遍历：\n");
 	LevelOrder(pRoot);
 	printf("\n\n");
 
@@ -332,7 +332,11 @@ void MirrorBinTreeNor(PBTNode pRoot) {
 
 // 二叉树的镜像---递归 
 void MirrorBinTree(PBTNode pRoot) {
-
+	if (pRoot) {
+		swapBTNodeNode(&(pRoot->LChild), &(pRoot->RChild));
+		MirrorBinTree(pRoot->LChild);
+		MirrorBinTree(pRoot->RChild);
+	}
 }
 
 // 求二叉树中结点的个数 

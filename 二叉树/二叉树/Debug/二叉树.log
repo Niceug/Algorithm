@@ -29,16 +29,16 @@ d:\visual studio 2015\projects\二叉树\二叉树\btree.c(327): warning C4024: 
 d:\visual studio 2015\projects\二叉树\二叉树\btree.c(329): warning C4047: “函数”:“ElementType *”与“PBTNode *”的间接级别不同
 d:\visual studio 2015\projects\二叉树\二叉树\btree.c(329): warning C4024: “QueuePop”: 形参和实参 2 的类型不同
 d:\visual studio 2015\projects\二叉树\二叉树\btree.c(322): warning C4047: “初始化”:“PBTNode”与“ElementType”的间接级别不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(403): warning C4047: “=”:“PBTNode”与“int”的间接级别不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(418): warning C4047: “函数”:“ElementType”与“PBTNode”的间接级别不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(418): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(420): warning C4047: “函数”:“ElementType *”与“PBTNode *”的间接级别不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(420): warning C4024: “QueuePop”: 形参和实参 2 的类型不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(424): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(424): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(425): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(425): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(392): warning C4715: “Find”: 不是所有的控件路径都返回值
-d:\visual studio 2015\projects\二叉树\二叉树\btree.c(408): warning C4715: “IsNodeInBinTree”: 不是所有的控件路径都返回值
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(407): warning C4047: “=”:“PBTNode”与“int”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(422): warning C4047: “函数”:“ElementType”与“PBTNode”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(422): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(424): warning C4047: “函数”:“ElementType *”与“PBTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(424): warning C4024: “QueuePop”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(428): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(428): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(429): warning C4047: “函数”:“ElementType”与“BTNode *”的间接级别不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(429): warning C4024: “QueuePush”: 形参和实参 2 的类型不同
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(396): warning C4715: “Find”: 不是所有的控件路径都返回值
+d:\visual studio 2015\projects\二叉树\二叉树\btree.c(412): warning C4715: “IsNodeInBinTree”: 不是所有的控件路径都返回值
   二叉树.vcxproj -> D:\visual studio 2015\Projects\二叉树\Debug\二叉树.exe
   二叉树.vcxproj -> D:\visual studio 2015\Projects\二叉树\Debug\二叉树.pdb (Full PDB)
