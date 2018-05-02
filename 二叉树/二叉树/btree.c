@@ -63,10 +63,18 @@ int main() {
 	int KSize = BinTreeKLevelNode(pRoot, K);
 	printf("第%d层节点个数为%d\n\n", K, KSize);
 
+	char c = '1';
+	PBTNode node = Find(pRoot, c);
+	if (node != NULL)
+		printf("找到了%c \n\n", node->data);
+	else
+		printf("没有%c这个节点！\n\n", c);
 
-	/*PBTNode node = Find(pRoot, '5');
-	if(node != NULL)
-		printf("找到了%c \n", node->data);*/
+
+	if (IsNodeInBinTree(pRoot, node))
+		printf("节点%c在二叉树中\n\n", node->data);
+	else
+		printf("节点%c不在二叉树中\n\n", c);
 
 	if (IsCompleteBinTree(pRoot))
 		printf("是完全二叉树！\n");
@@ -371,17 +379,32 @@ int BinTreeHeight(PBTNode pRoot) {
 
 // 在二叉树中查找值为data的结点，找到返回该结点，否则返回空 
 PBTNode Find(PBTNode pRoot, BTDataType data) {
-	if (pRoot != NULL) {
-		Find(pRoot->LChild, data);
-		if (data == pRoot->data)
-			return pRoot;
+	PBTNode node;
+	if (pRoot == NULL)
+		return NULL;
+	if (pRoot->data == data)
+		return pRoot;
+	node = Find(pRoot->LChild, data);
+	if (node == NULL) {
+		// 没找到就找右子树
 		Find(pRoot->RChild, data);
 	}
 }
 
 // 检测一个节点是否在二叉树中 
 int IsNodeInBinTree(PBTNode pRoot, PBTNode pNode) {
-
+	PBTNode node;
+	if (pNode == NULL)
+		return 0;
+	if (pRoot == NULL)
+		return 0;
+	if (pRoot == pNode)
+		return 1;
+	node = IsNodeInBinTree(pRoot->LChild, pNode);
+	if (node == NULL) {
+		// 没找到就找右子树
+		IsNodeInBinTree(pRoot->RChild, pNode);
+	}
 }
 // 检测一棵树是否为完全二叉树 
 int IsCompleteBinTree(PBTNode pRoot) {
