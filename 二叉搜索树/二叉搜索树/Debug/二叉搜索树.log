@@ -1,0 +1,13 @@
+﻿  BSTree.c
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(31): warning C4013: “strcmp”未定义；假设外部返回 int
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(108): warning C4013: “memset”未定义；假设外部返回 int
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(135): warning C4133: “函数”: 从“BSTreeNode *”到“BSTreeIPNode *”的类型不兼容
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(143): warning C4133: “函数”: 从“BSTreeNode *”到“BSTreeIPNode *”的类型不兼容
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(159): warning C4133: “函数”: 从“BSTreeNode **”到“BSTreeIPNode **”的类型不兼容
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(161): warning C4133: “函数”: 从“BSTreeNode **”到“BSTreeIPNode **”的类型不兼容
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(179): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(213): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(215): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(243): warning C4018: “<”: 有符号/无符号不匹配
+  二叉搜索树.vcxproj -> D:\visual studio 2015\Projects\二叉搜索树\Debug\二叉搜索树.exe
+  二叉搜索树.vcxproj -> D:\visual studio 2015\Projects\二叉搜索树\Debug\二叉搜索树.pdb (Full PDB)
