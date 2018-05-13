@@ -302,29 +302,59 @@ void testCountUnusualIP() {
 	getTopKUnusualIP(ips, 40, 5);
 }
 int main() {
-	testCountUnusualIP();
+	//testCountUnusualIP();
 	//testIsCorrectSpelling();
 	//tet
-	//BSTreeNode* pRoot = NULL;
-	//BSTreeDataType arr[] = {7, 11, 3, 1, 5, 9, 12, 4, 6, 8, 10};
-	//int len = sizeof(arr) / sizeof(arr[0]);
-	//
-	//for (int i = 0; i < len; i++) {
-	//	insertBSTreeNodeNor(&pRoot, arr[i]);
-	//}
-	//printf("插入所有节点成功！\n");
-	//printf("中序遍历二叉排序树：\n");
-	//inOrderBSTree(pRoot);
-	//// 搜索节点
-	//BSTreeNode* node = findBSTreeNode(pRoot, 7);
-	//printf("\n找到并删除节点%d\n", node->data);
-	//deleteBSTreeNode(&pRoot, node->data);
-	//printf("中序遍历二叉排序树：\n");
-	//inOrderBSTree(pRoot);
-	//// 销毁二叉树
-	//printf("\n销毁之后中序遍历二叉排序树：\n");
-	//destroyBSTreeNode(&pRoot);
-	//inOrderBSTree(pRoot);
+	BSTreeNode* pRoot = NULL;
+	BSTreeDataType arr[] = {7, 11, 3, 1, 5, 9, 12, 4, 6, 8, 10};
+	int len = sizeof(arr) / sizeof(arr[0]);
+	
+	for (int i = 0; i < len; i++) {
+		insertBSTreeNodeNor(&pRoot, arr[i]);
+	}
+	printf("插入所有节点成功！\n");
+	printf("中序遍历二叉排序树：\n");
+	inOrderBSTree(pRoot);
+
+	
+	// 搜索节点
+	BSTreeNode* node = findBSTreeNode(pRoot, 7);
+	printf("\n找到并删除节点%d\n", node->data);
+	deleteBSTreeNodeNor(&pRoot, node->data);
+	printf("中序遍历二叉排序树：\n");
+	inOrderBSTree(pRoot);
+
+	printf("\n将根节点8换成5\n");
+	pRoot->data = 5;
+	int ret = isBSTree(pRoot);
+	inOrderBSTree(pRoot);
+	if (ret)
+		printf("是二叉排序树\n", ret);
+	else
+		printf("不是二叉排序树\n");
+
+	printf("将根节点5换成11\n");
+	pRoot->data = 11;
+	ret = isBSTree(pRoot);
+	inOrderBSTree(pRoot);
+	if (ret)
+		printf("是二叉排序树\n", ret);
+	else
+		printf("不是二叉排序树\n");
+
+	printf("将根节点5换成9\n");
+	pRoot->data = 8;
+	ret = isBSTree(pRoot);
+	inOrderBSTree(pRoot);
+	if (ret)
+		printf("是二叉排序树\n", ret);
+	else
+		printf("不是二叉排序树\n");
+
+	// 销毁二叉树
+	printf("\n销毁之后中序遍历二叉排序树：\n");
+	destroyBSTreeNode(&pRoot);
+	inOrderBSTree(pRoot);
 	return 0;
 }
 
@@ -411,7 +441,7 @@ BSTreeNode* findBSTreeNodeNor(BSTreeNode* pRoot, BSTreeDataType data) {
 }
 
 // 删除节点
-void deleteBSTreeNode(BSTreeNode** pRoot, BSTreeDataType data) {
+void deleteBSTreeNodeNor(BSTreeNode** pRoot, BSTreeDataType data) {
 	// 找到节点
 	BSTreeNode* Cur = *pRoot;
 	BSTreeNode* preCur = NULL;
@@ -632,5 +662,37 @@ void destroyBSTreeNode(BSTreeNode** pRoot) {
 		destroyBSTreeNode(&(*pRoot)->RChild);
 		free(*pRoot);
 		*pRoot = NULL;
+	}
+}
+
+// 判断一颗树是不是二叉排序树(升序的二叉排序树)
+int isBSTree(BSTreeNode* pRoot) {
+	// 当前节点如果有右孩子，当前节点的值一定小于等于右孩子的最左孩子。
+	if (pRoot == NULL)
+		return 1;
+	if (pRoot->RChild != NULL) {
+		BSTreeNode* cur = pRoot->RChild;
+		if (cur->data < pRoot->data)
+			return 0;
+		while (cur->LChild) {
+			cur = cur->LChild;
+		}
+		if (cur->data < pRoot->data) {
+			return 0;
+		}
+		isBSTree(pRoot->LChild);
+	}
+	// 当前节点如果有左孩子，当前节点的值一定大于等于左孩子的最右孩子。
+	if (pRoot->LChild != NULL) {
+		BSTreeNode* cur = pRoot->LChild;
+		if (cur->data > pRoot->data)
+			return 0;
+		while (cur->RChild) {
+			cur = cur->RChild;
+		}
+		if (cur->data > pRoot->data) {
+			return 0;
+		}
+		isBSTree(pRoot->RChild);
 	}
 }

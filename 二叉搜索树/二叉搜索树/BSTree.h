@@ -39,15 +39,18 @@ BSTreeNode* findBSTreeNodeNor(BSTreeNode* pRoot, BSTreeDataType data);
 int insertBSTreeNode(BSTreeNode** pRoot, BSTreeDataType data);
 // 非递归插入节点
 int insertBSTreeNodeNor(BSTreeNode** pRoot, BSTreeDataType data);
-// 删除节点
-void deleteBSTreeNode(BSTreeNode** pRoot, BSTreeDataType data);
+// 非递归删除节点
+void deleteBSTreeNodeNor(BSTreeNode** pRoot, BSTreeDataType data);
 // 中序遍历二叉排序树
 void inOrderBSTree(BSTreeNode* pRoot);
 // 销毁二叉排序树
 void destroyBSTreeNode(BSTreeNode** pRoot);
 // 获取节点
 BSTreeNode* buyBSTreeNode(BSTreeDataType data);
-
+// 判断一颗树是不是二叉排序树
+int isBSTree(BSTreeNode* pRoot);
+// 调整二叉树
+void AVTree(BSTreeNode* pRoot);
 
 
 // 二叉树的应用之检测一个单词是否拼写正确

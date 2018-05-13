@@ -9,5 +9,12 @@ d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(179): wa
 d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(213): warning C4018: “>=”: 有符号/无符号不匹配
 d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(215): warning C4018: “>=”: 有符号/无符号不匹配
 d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(243): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(332): warning C4474: printf: 格式字符串中传递的参数太多
+  d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(332): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(341): warning C4474: printf: 格式字符串中传递的参数太多
+  d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(341): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(350): warning C4474: printf: 格式字符串中传递的参数太多
+  d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(350): note: 占位符和其参数预计 0 可变参数，但提供的却是 1 参数
+d:\visual studio 2015\projects\二叉搜索树\二叉搜索树\bstree.c(698): warning C4715: “isBSTree”: 不是所有的控件路径都返回值
   二叉搜索树.vcxproj -> D:\visual studio 2015\Projects\二叉搜索树\Debug\二叉搜索树.exe
   二叉搜索树.vcxproj -> D:\visual studio 2015\Projects\二叉搜索树\Debug\二叉搜索树.pdb (Full PDB)
