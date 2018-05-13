@@ -1,0 +1,15 @@
+﻿  heap.c
+d:\visual studio 2015\projects\堆\堆\heap.c(19): warning C4020: “getDataFromGreatData”: 实参太多
+d:\visual studio 2015\projects\堆\堆\heap.c(41): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(53): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(67): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(69): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(126): warning C4550: 表达式计算为缺少参数列表的函数
+d:\visual studio 2015\projects\堆\堆\heap.c(150): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(152): warning C4018: “>=”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(178): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(180): warning C4018: “<”: 有符号/无符号不匹配
+d:\visual studio 2015\projects\堆\堆\heap.c(200): warning C4029: 声明的形参表不同于定义
+d:\visual studio 2015\projects\堆\堆\heap.c(216): warning C4018: “<”: 有符号/无符号不匹配
+  堆.vcxproj -> D:\visual studio 2015\Projects\堆\Debug\堆.exe
+  堆.vcxproj -> D:\visual studio 2015\Projects\堆\Debug\堆.pdb (Full PDB)
